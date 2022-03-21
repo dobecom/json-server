@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "file-reader": "^1.1.1",
+    "json-server": "^0.17.0",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "name": "jsonserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
