@@ -1,7 +1,9 @@
 require('dotenv').config();
-let jsonArr = [];
+let errArr = [];
+let infoArr = [];
 let localData = {
-  err: jsonArr,
+  err: errArr,
+  info: infoArr
 };
 
 const f = require('fs');
@@ -32,7 +34,10 @@ try {
   dataArr.map((data, index, arr) => {
     let tempJson = JSON.parse(data);
     tempJson.id = index;
-    jsonArr.push(tempJson);
+    if (tempJson.hasOwnProperty('error'))
+      errArr.push(tempJson);
+    else
+      infoArr.push(tempJson)
   })
   f.writeFileSync(outputFile, JSON.stringify(localData))
 }
